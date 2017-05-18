@@ -1,0 +1,14 @@
+<h1>게시글 확인하기</h1>
+
+
+<% @post.each do |p| %>
+    <div>
+        제목 : <%= @post.title %>
+    </div>
+    <div>
+        내용 : <%= @post.content %>
+    </div>
+<% end %>
+
+
+<a href='/'> 돌아가기</a>

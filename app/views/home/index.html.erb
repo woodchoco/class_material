@@ -1,0 +1,27 @@
+<h1>게시판 만들기</h1>
+
+<form action="/write" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">제목</label>
+    <input name="title" type="text" class="form-control" id="exampleInputEmail1" placeholder="제목을 입력해주세요">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">내용</label>
+    <textarea name="content" class="form-control" id="exampleInputPassword1" placeholder="글을 남겨 주세요"></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">확인</button>
+</form>
+
+<h1>게시글 확인하기</h1>
+
+
+<% @post2.each do |p| %>
+    <div>
+       <%= p.id %>
+       <%= p.title %>
+       <%= p.content %>
+       <%= p.created_at %>
+    </div>
+    <br>
+<% end %>
+
