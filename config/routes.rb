@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   get 'home/index'
   post '/write' => 'home#write'
   
+  get 'update/:Jengwha' => "home#update"
+  post '/update_post/:post_id' => "home#update_post"
+  get 'destroy/:unist' => "home#destroy"
+  
+  
+  #resources :home
+  #<%= link_to 'delete', home_path(p), method: :delete , data: {confirm: 'are you sure?'} %>
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

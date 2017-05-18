@@ -21,6 +21,8 @@
        <%= p.title %>
        <%= p.content %>
        <%= p.created_at %>
+       <a href="/update/<%=p.id%>">[수정]</a>
+       <a href="/destroy/<%=p.id%>">[삭제]</a>
     </div>
     <br>
 <% end %>
